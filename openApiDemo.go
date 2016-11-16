@@ -14,12 +14,12 @@ import (
 
 func main() {
 	url := "http://api.letvcloud.com/open.php"
-	secretkey := "9d43ac5d51a2360edd0a9b744d624a3e"
+	secretkey := "乐视云点播用户私钥"
 	param := make(map[string]string)
 	param["api"] = "video.get"
-	param["video_id"] = "8243607"
+	param["video_id"] = "视频id"
 	param["ver"] = "2.0"
-	param["user_unique"] = "c191a085a2"
+	param["user_unique"] = "用UUID"
 	param["format"] = "json"
 	param["timestamp"] = strconv.FormatInt(time.Now().Unix(), 10)
 	sign := getSign(param, secretkey)
